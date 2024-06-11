@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar/navbar.component';
 import { PostFormComponent } from './postForm/post-form/post-form.component';
 import { PostsComponent } from './posts/posts/posts.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     PostFormComponent,
     PostsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
