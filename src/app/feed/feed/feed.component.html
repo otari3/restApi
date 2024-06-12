@@ -1,4 +1,11 @@
 <main>
+  <section>
+    <div>
+      <app-post-form *ngIf="hiddingModule">
+        <button (click)="newPost()" class="btn">Cancle</button></app-post-form
+      >
+    </div>
+  </section>
   <div class="mainDiv">
     <div class="collum">
       <div class="row">
@@ -14,10 +21,3 @@
     <app-posts></app-posts>
   </div>
 </main>
-<section>
-  <div>
-    <app-post-form *ngIf="hiddingModule">
-      <button (click)="newPost()" class="btn">Cancle</button></app-post-form
-    >
-  </div>
-</section>
