@@ -8,12 +8,16 @@
       <div class="post">
         <button (click)="newPost()">New Post</button>
       </div>
-      <div>
-        <app-posts></app-posts>
-      </div>
     </div>
   </div>
+  <div class="posts">
+    <app-posts></app-posts>
+  </div>
 </main>
-<app-post-form *ngIf="hiddingModule">
-  <button (click)="newPost()" class="btn">Cancle</button></app-post-form
->
+<section>
+  <div>
+    <app-post-form *ngIf="hiddingModule">
+      <button (click)="newPost()" class="btn">Cancle</button></app-post-form
+    >
+  </div>
+</section>

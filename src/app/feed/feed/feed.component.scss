@@ -7,7 +7,8 @@ main {
   margin-top: 80px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   .mainDiv {
     .collum {
@@ -50,4 +51,20 @@ main {
   height: 40px;
   color: white;
   cursor: pointer;
+}
+.posts {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  flex-direction: column;
+}
+section {
+  position: relative;
+  div {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    height: 100%;
+    bottom: 350px;
+  }
 }
