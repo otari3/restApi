@@ -1,11 +1,11 @@
 <main>
   <div class="postInformation">
-    <h3>Posted By Name and data</h3>
+    <h3>Posted By {{ post.creator.name }} and {{ post.date.split("T")[0] }}</h3>
     <h2>{{ post.content }}</h2>
   </div>
   <div class="btns">
     <button class="btn btn-primary">View</button>
-    <button class="btn btn-info">Edit</button>
+    <button class="btn btn-info" (click)="editInfo()">Edit</button>
     <button class="btn btn-danger">Delete</button>
   </div>
 </main>

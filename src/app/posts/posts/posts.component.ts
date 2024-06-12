@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-posts',
@@ -7,4 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class PostsComponent {
   @Input() post: any;
+  @Output() editing = new EventEmitter<any>();
+  editInfo() {
+    this.editing.emit(this.post);
+  }
 }
