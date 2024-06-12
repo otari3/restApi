@@ -24,7 +24,6 @@ export class PostFormComponent implements OnInit {
   }
   ngOnInit(): void {
     if (this.editInfo) {
-      console.log('test');
       this.post.patchValue({
         title: this.editInfo.title,
         content: this.editInfo.content,

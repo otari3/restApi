@@ -27,7 +27,9 @@
       </div>
       <div class="buttons">
         <ng-content></ng-content>
-        <button type="submit" class="btn">Accept</button>
+        <button type="submit" class="btn">
+          {{ editInfo ? "Edit" : "Accept" }}
+        </button>
       </div>
     </form>
   </div>
