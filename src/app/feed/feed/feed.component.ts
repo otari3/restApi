@@ -19,9 +19,16 @@ export class FeedComponent implements OnInit {
     this.infoAboutEdit = event;
     this.hiddingModule = true;
   }
-  ngOnInit(): void {
+  infoHasPosted(event: any) {
+    this.hiddingModule = false;
+    this.gettingPosts();
+  }
+  gettingPosts() {
     this.http.gettingPosts().subscribe((data: any) => {
       this.posts = data.posts;
     });
+  }
+  ngOnInit(): void {
+    this.gettingPosts();
   }
 }

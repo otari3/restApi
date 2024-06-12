@@ -1,7 +1,7 @@
 <main>
   <section>
     <div>
-      <app-post-form *ngIf="hiddingModule" [editInfo]="infoAboutEdit">
+      <app-post-form *ngIf="hiddingModule" [editInfo]="infoAboutEdit" (postedInfo)="infoHasPosted($event)">
         <button (click)="newPost()" class="btn">Cancle</button></app-post-form
       >
     </div>
