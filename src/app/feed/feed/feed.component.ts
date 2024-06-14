@@ -20,12 +20,17 @@ export class FeedComponent implements OnInit {
     this.hiddingModule = true;
   }
   infoHasPosted(event: any) {
-    this.hiddingModule = false;
-    this.gettingPosts();
+    this.gettingPosts(() => {
+      this.hiddingModule = false;
+    });
   }
-  gettingPosts() {
+  //doing callbacks if i ever need to look at it again
+  gettingPosts(cd?: () => void) {
     this.http.gettingPosts().subscribe((data: any) => {
       this.posts = data.posts;
+      if (cd) {
+        cd!();
+      }
     });
   }
   ngOnInit(): void {

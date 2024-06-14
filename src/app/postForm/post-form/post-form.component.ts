@@ -25,17 +25,17 @@ export class PostFormComponent implements OnInit {
   @Input() editInfo: any;
   @Output() postedInfo = new EventEmitter<void>();
   gettingPostsInfor() {
-    if(!this.editInfo){ 
+    if (!this.editInfo) {
       this.http
-      .postingPost({
-        title: this.post.get('title')?.value,
-        content: this.post.get('content')?.value,
-      })
-      .subscribe({
-        next: (v) => {  
-          this.postedInfo.emit()
-        },
-      });
+        .postingPost({
+          title: this.post.get('title')?.value,
+          content: this.post.get('content')?.value,
+        })
+        .subscribe({
+          next: (v) => {
+            this.postedInfo.emit();
+          },
+        });
     }
   }
   ngOnInit(): void {
