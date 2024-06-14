@@ -27,7 +27,7 @@ export class FeedComponent implements OnInit {
   //doing callbacks if i ever need to look at it again
   gettingPosts(cd?: () => void) {
     this.http.gettingPosts().subscribe((data: any) => {
-      this.posts = data.posts;
+      this.posts = data.products;
       if (cd) {
         cd!();
       }
