@@ -13,3 +13,7 @@ export class HttpMethodsService {
   }
   constructor(private http: HttpClient) {}
 }
+
+// headers: new HttpHeaders({
+//   'Content-Type': 'application/json',
+// }),
