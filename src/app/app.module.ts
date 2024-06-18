@@ -10,6 +10,8 @@ import { PostFormComponent } from './postForm/post-form/post-form.component';
 import { PostsComponent } from './posts/posts/posts.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register/register.component';
+import { LoginComponent } from './logIn/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     PostFormComponent,
     PostsComponent,
+    RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
