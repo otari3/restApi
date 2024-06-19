@@ -1,1 +1,24 @@
-<p>register works!</p>
+<form [formGroup]="userInfo" (ngSubmit)="register()">
+  <div class="formc margTitle">
+    <div>
+      <label for="title">email</label>
+      <input type="text" id="title" formControlName="email" />
+    </div>
+  </div>
+  <div class="formc">
+    <div>
+      <label for="image">User Name</label>
+      <input type="text" id="image" formControlName="userName" />
+    </div>
+  </div>
+  <div class="formc content">
+    <div>
+      <label for="content">password</label>
+      <input type="text" formControlName="password" id="content" />
+    </div>
+  </div>
+  <div class="buttons">
+    <ng-content></ng-content>
+    <button type="submit" class="btn">register</button>
+  </div>
+</form>
