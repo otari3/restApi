@@ -11,6 +11,9 @@ export class HttpMethodsService {
   postingPost(post: any) {
     return this.http.post('http://localhost:8080/feed/post', post);
   }
+  signup(user: any) {
+    return this.http.post('http://localhost:8080/signup', user);
+  }
   constructor(private http: HttpClient) {}
 }
 
